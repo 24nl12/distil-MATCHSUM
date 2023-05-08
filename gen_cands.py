@@ -15,6 +15,7 @@ def load_jsonl(data_path):
     return data
 
 data = load_jsonl("reddit_data/reddit_100.jsonl")
+tokenizer = nltk.data.load('nltk:tokenizers/punkt/english.pickle')
 bert_model = Summarizer()
 
 for i, entry in enumerate(data):
